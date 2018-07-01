@@ -8,7 +8,8 @@ A java Client-Server app that shows implementation of Java Socket programming
 ## run
 `java Server 1234`
 
-in a second terminal  
+in another cli window  
+
 `java Client localhost 1234`
 
 <a href="https://github.com/wangai" target="_blank">Your's Trully</a>
