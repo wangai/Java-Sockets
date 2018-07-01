@@ -1,10 +1,8 @@
 # Java-Sockets
 A java Client-Server app that shows implementation of Java Socket programming
 
-## compile
-- server
-`javac Server.java`  
--client  
+## compile  
+`javac Server.java`   
 `javac Client.java`
 
 ## run
