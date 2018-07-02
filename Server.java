@@ -58,7 +58,10 @@ public class Server extends Thread {
             do {
                
                // ** evaluate request
-               if (service == 1) {
+
+               if (service == 0) {
+                  break; // from do while
+               } else if (service == 1) {
 
                   output.writeUTF("\n\nSERVER>\n" + menu());
 
@@ -90,8 +93,7 @@ public class Server extends Thread {
 
             } while (service != 0);
 
-            output.writeUTF("Thank you for connecting to " + server.getLocalSocketAddress()
-               + "\nGoodbye!");
+            output.writeUTF("SERVER>\n\t " + "Thank you for connecting to " + server.getLocalSocketAddress());
 
             server.close();
             
@@ -99,7 +101,7 @@ public class Server extends Thread {
             
          } catch (SocketTimeoutException s) {
 
-            System.out.println("Socket timed out \nGoodbye!");
+            System.out.println("Socket timed out");
             break;
 
          } catch (IOException e) {
